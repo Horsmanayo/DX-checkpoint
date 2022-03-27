@@ -9,13 +9,13 @@
 // function to get the length of the longest word in string,
 // i am getting the length longest word in the sentence to be able to
 // check through the array of which word matches the length of the longest word
-const getLength = (string) => {
-  const num = string
+const getLength = (str) => {
+  const length = str
     .replace(/,/g, "")
     .split(" ")
     .reduce((prev, curr) => (curr.length > prev.length ? curr : prev)).length;
 
-  return num;
+  return length;
 };
 
 //filtering words that has the same length as above
@@ -28,7 +28,7 @@ const filterLongestWords = (arr, num) => {
 };
 
 //returning the word with the most vowel in an array
-// looping through the longest if the array return
+// looping through the longest if the array.length exceeds one
 const mostVowels = (arr) => {
   let vowels = [..."aeiouAEIOU"];
 
