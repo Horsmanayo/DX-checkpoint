@@ -17,17 +17,19 @@ function twoSum(nums, target) {
     // console.log("currenVal:", currentValue);
     //getting the first value to compare to other value that sums up to the target
     const neededValue = target - currentValue;
-    // console.log("needed:", neededValue);
+    console.log("needed:", neededValue);
 
     if (previousValues[neededValue] != null) {
-      //   console.log(previousValues[neededValue]);
+      console.log("prevVal:", previousValues);
       return [neededValue, currentValue];
     } else {
-      previousValues[currentValue] = i;
+      previousValues[currentValue] = currentValue;
     }
   }
 
   return [];
 }
+console.log(twoSum([7, 11, 15, 2], 9));
 
-console.log(twoSum([2, 7, 11, 15], 9));
+
+
