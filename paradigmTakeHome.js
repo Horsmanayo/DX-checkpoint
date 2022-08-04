@@ -9,7 +9,7 @@
 // Explanation: Because 2 + 7 == 9, we return [2, 7]
 
 function twoSum(nums, target) {
-  //object to keep track of values in the array
+  //empty object to keep track of values in the array
   const previousValues = {};
   for (let i = 0; i < nums.length; i++) {
     //saving each value in the array into a variable
