@@ -17,19 +17,19 @@ function twoSum(nums, target) {
     // console.log("currenVal:", currentValue);
     //getting the first value to compare to other value that sums up to the target
     const neededValue = target - currentValue;
+
+    //needed value is the second number we will be searching for in the array
+
     console.log("needed:", neededValue);
 
     if (previousValues[neededValue] != null) {
-      console.log("prevVal:", previousValues);
       return [neededValue, currentValue];
     } else {
       previousValues[currentValue] = currentValue;
+      console.log("prevVal:", previousValues);
     }
   }
 
   return [];
 }
 console.log(twoSum([7, 11, 15, 2], 9));
-
-
-
